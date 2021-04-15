@@ -506,13 +506,19 @@
                 всегда хотелось быть.
             </span>
         </div>
-        <div class="audio-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="audio-block">
+            <div class="ion-play1" id="play1"></div>
+            <div class="ion-play2" id="play2"></div>
+            <div class="ion-play3" id="play3"></div>
+            <div class="ion-play4" id="play4"></div>
+            <div class="ion-play5" id="play5"></div>
+            <div class="ion-play6" id="play6"></div>
+            <audio id="myAudio1" src="01.mp3" preload="none"></audio>
+            <audio id="myAudio2" src="02.mp3" preload="none"></audio>
+            <audio id="myAudio3" src="03.mp3" preload="none"></audio>
+            <audio id="myAudio4" src="04.mp3" preload="none"></audio>
+            <audio id="myAudio5" src="05.mp3" preload="none"></audio>
+            <audio id="myAudio6" src="06.mp3" preload="none"></audio>
         </div>
         <div name="b-94" class="block l-44 ln-20_16">
             <span class="f-14">
@@ -637,6 +643,83 @@
             </div>
         </div>
     </section>
-	<div id="wm" style="position: fixed; display: none; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 9999999;"><div style="display: table; width: 100%; min-height: 100%;"><div style=" display: table-cell; vertical-align: middle; text-align: center; padding: 20px; "><div style=" display: block; background: #ffffff; padding: 10px 15px; border-radius: 5px; max-width: 480px; margin: auto; text-align: center; line-height: 1.5; "><img style="display: block; margin: auto; max-width: 100%;" src="/promo/loading.gif"></div></div></div></div>
+	
+    <div id="wm" style="position: fixed; display: none; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 9999999;"><div style="display: table; width: 100%; min-height: 100%;"><div style=" display: table-cell; vertical-align: middle; text-align: center; padding: 20px; "><div style=" display: block; background: #ffffff; padding: 10px 15px; border-radius: 5px; max-width: 480px; margin: auto; text-align: center; line-height: 1.5; "><img style="display: block; margin: auto; max-width: 100%;" src="/promo/loading.gif"></div></div></div></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var playBtn1 = document.getElementById("play1"),
+myAudio1 = document.getElementById("myAudio1"),
+isPlaying = !1;
+$(playBtn1).click(function () {
+isPlaying ? myAudio1.pause() : myAudio1.play();
+}),
+(myAudio1.onplaying = function () {
+    (isPlaying = !0), $(playBtn1).removeClass("ion-play1"), $(playBtn1).addClass("ion-pause1");
+}),
+(myAudio1.onpause = function () {
+    (isPlaying = !1), $(playBtn1).addClass("ion-play1"), $(playBtn1).removeClass("ion-pause1");
+});
+var playBtn2 = document.getElementById("play2"),
+myAudio2 = document.getElementById("myAudio2");
+(isPlaying = !1),
+$(playBtn2).click(function () {
+    isPlaying ? myAudio2.pause() : myAudio2.play();
+}),
+(myAudio2.onplaying = function () {
+    (isPlaying = !0), $(playBtn2).removeClass("ion-play2"), $(playBtn2).addClass("ion-pause2");
+}),
+(myAudio2.onpause = function () {
+    (isPlaying = !1), $(playBtn2).addClass("ion-play2"), $(playBtn2).removeClass("ion-pause2");
+});
+var playBtn3 = document.getElementById("play3"),
+myAudio3 = document.getElementById("myAudio3");
+(isPlaying = !1),
+$(playBtn3).click(function () {
+    isPlaying ? myAudio3.pause() : myAudio3.play();
+}),
+(myAudio3.onplaying = function () {
+    (isPlaying = !0), $(playBtn3).removeClass("ion-play3"), $(playBtn3).addClass("ion-pause3");
+}),
+(myAudio3.onpause = function () {
+    (isPlaying = !1), $(playBtn3).addClass("ion-play3"), $(playBtn3).removeClass("ion-pause3");
+});
+var playBtn4 = document.getElementById("play4"),
+myAudio4 = document.getElementById("myAudio4");
+(isPlaying = !1),
+$(playBtn4).click(function () {
+    isPlaying ? myAudio4.pause() : myAudio4.play();
+}),
+(myAudio4.onplaying = function () {
+    (isPlaying = !0), $(playBtn4).removeClass("ion-play4"), $(playBtn4).addClass("ion-pause4");
+}),
+(myAudio4.onpause = function () {
+    (isPlaying = !1), $(playBtn4).addClass("ion-play4"), $(playBtn4).removeClass("ion-pause4");
+});
+var playBtn5 = document.getElementById("play5"),
+myAudio5 = document.getElementById("myAudio5");
+(isPlaying = !1),
+$(playBtn5).click(function () {
+    isPlaying ? myAudio5.pause() : myAudio5.play();
+}),
+(myAudio5.onplaying = function () {
+    (isPlaying = !0), $(playBtn5).removeClass("ion-play5"), $(playBtn5).addClass("ion-pause5");
+}),
+(myAudio5.onpause = function () {
+    (isPlaying = !1), $(playBtn5).addClass("ion-play5"), $(playBtn5).removeClass("ion-pause5");
+});
+var playBtn6 = document.getElementById("play6"),
+myAudio6 = document.getElementById("myAudio6");
+(isPlaying = !1),
+$(playBtn6).click(function () {
+    isPlaying ? myAudio6.pause() : myAudio6.play();
+}),
+(myAudio6.onplaying = function () {
+    (isPlaying = !0), $(playBtn6).removeClass("ion-play6"), $(playBtn6).addClass("ion-pause6");
+}),
+(myAudio6.onpause = function () {
+    (isPlaying = !1), $(playBtn6).addClass("ion-play6"), $(playBtn6).removeClass("ion-pause6");
+});
+    </script>
+
 </body>
 </html>
