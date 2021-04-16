@@ -437,7 +437,7 @@ body {
     display: block;
     position: absolute;
     margin-top: .83em;
-    margin-left: 2.61em;
+    margin-left: 5.61em;
     font-size: 1.8em;
     white-space: nowrap;
 }
@@ -1433,6 +1433,10 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
     color: #fff;
+}
+
+button {
+    text-align: center !important;
 }
 
 .audio-block {
